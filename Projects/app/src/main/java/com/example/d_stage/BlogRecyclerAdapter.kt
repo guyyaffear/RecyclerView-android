@@ -31,9 +31,9 @@ class BlogRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     override fun getItemCount(): Int {
         return items.size
     }
- fun sumbitList(blogList: :List<BlogPost>){
-     items = 
- }
+    fun submitList(blogList: List<BlogPost>){
+        items = blogList
+    }
     class BlogViewHolder constructor(
          itemView: View
     ): RecyclerView.ViewHolder(itemView){
