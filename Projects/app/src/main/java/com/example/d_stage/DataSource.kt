@@ -10,10 +10,10 @@ class DataSource{
             val list = ArrayList<BlogPost>()
             list.add(
                 BlogPost(
-                    "Congratulations!",
-                    "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
+                    "Jessica Kvon!",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ullamco laboris nisi ut sed do eiusmod tempor  aliquip ex ea... More",
                     "https://raw.githubusercontent.com/mitchtabian/Blog-Images/master/digital_ocean.png",
-                    "Sally"
+                    "About me"
                 )
             )
             list.add(
