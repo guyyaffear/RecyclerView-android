@@ -13,6 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val pointer ="https://en.wikipedia.org/wiki/Kotlin_(programming_language)#/media/File:Kotlin-logo.svg"
     }
+    private fun addDataSet(){
+        val data = DataSource.createDataSet()
+        blogAdapter.submitList(data)
+    }
+
     private fun initRecyclerView(){
         recycler_view.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
