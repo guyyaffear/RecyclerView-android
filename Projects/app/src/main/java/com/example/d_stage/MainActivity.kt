@@ -11,7 +11,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val pointer ="https://en.wikipedia.org/wiki/Kotlin_(programming_language)#/media/File:Kotlin-logo.svg"
+
+        initRecyclerView()
+        addDataSet()
     }
     private fun addDataSet(){
         val data = DataSource.createDataSet()
@@ -19,13 +21,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView(){
+
         recycler_view.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            val topSpacingDecorator = TopSpacingItemDecoration(30)
+            val topSpacingDecorator = topSpacingDecorator(30)
             addItemDecoration(topSpacingDecorator)
             blogAdapter = BlogRecyclerAdapter()
             adapter = blogAdapter
         }
-
-    }
+}
 }
