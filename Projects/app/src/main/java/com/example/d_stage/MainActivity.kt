@@ -10,4 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val pointer ="https://en.wikipedia.org/wiki/Kotlin_(programming_language)#/media/File:Kotlin-logo.svg"
     }
+    private fun initRecyclerView(){
+        rec
+    }
 }
