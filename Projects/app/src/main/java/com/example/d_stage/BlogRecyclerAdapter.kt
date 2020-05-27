@@ -25,14 +25,15 @@ class BlogRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
             is BlogViewHolder -> {
                 holder.bind(items.get(position))
             }
-
         }
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
-
+ fun sumbitList(blogList: :List<BlogPost>){
+     items = 
+ }
     class BlogViewHolder constructor(
          itemView: View
     ): RecyclerView.ViewHolder(itemView){
