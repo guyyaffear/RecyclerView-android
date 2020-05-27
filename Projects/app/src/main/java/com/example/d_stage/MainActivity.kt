@@ -3,9 +3,12 @@ package com.example.d_stage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+
     private lateinit var blogAdapter: BlogRecyclerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
         addDataSet()
     }
+
     private fun addDataSet(){
         val data = DataSource.createDataSet()
         blogAdapter.submitList(data)
@@ -24,10 +28,13 @@ class MainActivity : AppCompatActivity() {
 
         recycler_view.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            val topSpacingDecorator = topSpacingDecorator(30)
+            val topSpacingDecorator = TopSpacingItemDecoration(30)
             addItemDecoration(topSpacingDecorator)
             blogAdapter = BlogRecyclerAdapter()
             adapter = blogAdapter
         }
+    }
+
+
 }
-}
+
