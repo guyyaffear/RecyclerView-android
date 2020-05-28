@@ -15,25 +15,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        initRecyclerView()
-//        addDataSet()
+        initRecyclerView()
+        addDataSet()
     }
 
-//    private fun addDataSet(){
-//        val data = DataSource.createDataSet()
-//        blogAdapter.submitList(data)
-//    }
+    private fun addDataSet(){
+        val data = DataSource.createDataSet()
+        blogAdapter.submitList(data)
+    }
 
-//    private fun initRecyclerView(){
-//
-//        recycler_view.apply {
-//            layoutManager = LinearLayoutManager(this@MainActivity)
-//            val topSpacingDecorator = TopSpacingItemDecoration(30)
-//            addItemDecoration(topSpacingDecorator)
-//            blogAdapter = BlogRecyclerAdapter()
-//            adapter = blogAdapter
-//        }
-//    }
+    private fun initRecyclerView(){
+
+        recycler_view.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            val topSpacingDecorator = TopSpacingItemDecoration(30)
+            addItemDecoration(topSpacingDecorator)
+            blogAdapter = BlogRecyclerAdapter()
+            adapter = blogAdapter
+        }
+    }
 
 
 }
