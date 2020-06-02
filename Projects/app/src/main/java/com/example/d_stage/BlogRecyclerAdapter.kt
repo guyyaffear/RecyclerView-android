@@ -38,12 +38,12 @@ class BlogRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
          itemView: View
     ): RecyclerView.ViewHolder(itemView){
         val blog_image = itemView.blog_image;// ID that we refring to inside the layout file
-        val blog_title = itemView.blog_title;
-        val blog_author = itemView.blog_author;
+//        val blog_title = itemView.blog_title;
+//        val blog_author = itemView.blog_author;
 
         fun bind(blogPost: BlogPost){
-            blog_title.setText(blogPost.title)
-            blog_author.setText(blogPost.username)
+//            blog_title.setText(blogPost.title)
+//            blog_author.setText(blogPost.username)
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)

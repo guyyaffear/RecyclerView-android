@@ -2,6 +2,7 @@ package com.example.d_stage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.HorizontalScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         initRecyclerView()
         addDataSet()
     }
@@ -24,16 +24,16 @@ class MainActivity : AppCompatActivity() {
         blogAdapter.submitList(data)
     }
 
-    private fun initRecyclerView(){
+private fun initRecyclerView(){
 
-        recycler_view.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            val topSpacingDecorator = TopSpacingItemDecoration(30)
-            addItemDecoration(topSpacingDecorator)
-            blogAdapter = BlogRecyclerAdapter()
-            adapter = blogAdapter
-        }
-    }
+      recycler_view.apply {
+           layoutManager = LinearLayoutManager( this@MainActivity, LinearLayoutManager.HORIZONTAL, true)
+           val topSpacingDecorator = TopSpacingItemDecoration(30)
+           addItemDecoration(topSpacingDecorator)
+          blogAdapter = BlogRecyclerAdapter()
+           adapter = blogAdapter
+       }
+   }
 
 
 }

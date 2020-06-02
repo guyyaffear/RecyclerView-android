@@ -12,7 +12,7 @@ class DataSource{
                 BlogPost(
                     "Jessica Kvon!",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ullamco laboris nisi ut sed do eiusmod tempor  aliquip ex ea... More",
-                    "https://raw.githubusercontent.com/mitchtabian/Blog-Images/master/digital_ocean.png",
+                    "https://images.app.goo.gl/LE3XHqHYVAVTTs988",
                     "About me"
                 )
             )
@@ -20,7 +20,7 @@ class DataSource{
                 BlogPost(
                     "Time to Build a Kotlin App!",
                     "The REST API course is complete. You can find the videos here: https://codingwithmitch.com/courses/build-a-rest-api/.",
-                    "https://raw.githubusercontent.com/mitchtabian/Kotlin-RecyclerView-Example/json-data-source/app/src/main/res/drawable/time_to_build_a_kotlin_app.png",
+                    "https://images.app.goo.gl/GD8eqUScVjQiwnPp7",
                     "mitch"
                 )
             )
@@ -29,7 +29,7 @@ class DataSource{
                 BlogPost(
                     "Interviewing a Web Developer and YouTuber",
                     "Justin has been producing online courses for YouTube, Udemy, and his website CodingForEntrepreneurs.com for over 5 years.",
-                    "https://raw.githubusercontent.com/mitchtabian/Kotlin-RecyclerView-Example/json-data-source/app/src/main/res/drawable/coding_for_entrepreneurs.png",
+                    "https://images.app.goo.gl/KrmDeDZDa2Lv3wpi8",
                     "John"
                 )
             )

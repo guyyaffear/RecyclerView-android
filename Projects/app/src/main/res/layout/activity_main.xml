@@ -12,40 +12,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"/>
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewOne"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:cardBackgroundColor="@color/cardview_dark_background"
-        app:cardCornerRadius="8dp"
-        app:contentPadding="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:shadowColor="#000"
         android:shadowDx="0"
         android:shadowDy="30"
         android:shadowRadius="50"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/container1">
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="72dp">
+
+            <TextView
+                android:id="@+id/aboutMe"
+                android:layout_width="35dp"
+                android:layout_height="10dp"
+                android:text="About me"
+                android:textColor="#f5f1f2"
+                android:textSize="7sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageView"
+                app:layout_constraintStart_toStartOf="@id/bigText"
+                app:layout_constraintTop_toTopOf="@id/bigText" />
+
             <ImageView
                 android:id="@+id/imageView"
-                android:src="@drawable/download"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
-                app:layout_constraintCircleRadius="6dp"
+                android:layout_marginBottom="55dp"
+                android:src="@drawable/download"
                 app:layout_constraintBottom_toBottomOf="@+id/container1"
-                app:layout_constraintStart_toStartOf="@+id/container1"
-                android:layout_marginEnd="3dp"
-                />
-
+                app:layout_constraintStart_toStartOf="@+id/container1" />
 
             <TextView
                 android:id="@+id/titleText"
@@ -53,9 +64,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_toEndOf="@id/imageView"
+                android:fontFamily="sans-serif-medium"
                 android:text="Jessica Kvon"
                 android:textColor="#ffffff"
-                android:fontFamily="sans-serif-medium"
                 android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="@+id/shortBio"
                 app:layout_constraintLeft_toLeftOf="@id/imageView"
@@ -65,129 +76,125 @@
                 android:id="@+id/shortBio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="5.5sp"
                 android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="5.5sp"
                 android:text="Short Bio"
                 android:textColor="#333333"
                 android:textSize="5.5sp"
                 app:layout_constraintStart_toStartOf="@id/titleText"
-                app:layout_constraintTop_toBottomOf="@id/titleText"/>
+                app:layout_constraintTop_toBottomOf="@id/titleText" />
+
 
             <TextView
-                android:id="@+id/aboutMe"
+                android:id="@+id/bigText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="@id/imageView"
-                app:layout_constraintStart_toStartOf="@id/container1"
-                android:textColor="#f5f1f2"
-                android:text="About me"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/aboutMe"
-                app:layout_constraintStart_toStartOf="@id/aboutMe"
-                android:textSize="5.5sp"
-                android:textColor="#f5f1f2"
                 android:lineSpacingExtra="5.5sp"
-                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ullamco laboris nisi ut sed do eiusmod tempor  aliquip ex ea... More"
-                />
+                android:text="Lorem ipsum dolor sit amet, /n consectetur adipiscing elit, sed do eiusmod tempor incidid ullamco laboris nisi ut sed do eiusmod tempor  aliquip ex ea... More"
+                android:textColor="#f5f1f2"
+                android:textSize="5.5sp"
+                app:layout_constraintStart_toStartOf="@id/aboutMe"
+                app:layout_constraintTop_toBottomOf="@id/aboutMe" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:shadowColor="#000"
+        android:shadowDx="0"
+        android:shadowDy="30"
+        android:shadowRadius="50"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewOne">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/textNextShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_centerInParent="true"
+                android:text="winner of may 4 place in current contest"
+                android:textColor="#e4e6f1"
+                android:textSize="5.5sp" />
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="46dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="222dp"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@+id/textNextShow"
+                android:text="1:23:10 \nNext Show"
+                android:textColor="#e4e6f1"
+                android:textSize="5.5sp" />
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/cardViewTwo"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/cardViewOne">-->
-<!--        <androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content">-->
-<!--            <ImageView-->
-<!--                android:id="@+id/secondimageView"-->
-<!--                android:layout_width="32dp"-->
-<!--                android:layout_height="32dp"-->
-<!--                app:layout_constraintBottom_toTopOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"/>-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/recycler_view"/>
+            <ImageView
+                android:id="@+id/thirdimageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
 
-<!--            <TextView-->
-<!--                android:id="@+id/secondtitleText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:lineSpacingExtra="1.5sp"-->
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="8sp"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/secondimageView"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                android:text="Jessica Kvon" />-->
+            <TextView
+                android:id="@+id/thirdtitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="1.5sp"
+                android:textColor="#000000"
+                android:textSize="8sp"
+                app:layout_constraintTop_toBottomOf="@id/thirdimageView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Jessica Kvon" />
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:lineSpacingExtra="5.5sp"-->
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="5.5sp"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/secondtitleText"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ullamco laboris nisi ut sed do eiusmod tempor  aliquip ex ea... More" />-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5.5sp"
+                android:textColor="#000000"
+                android:textSize="5.5sp"
+                app:layout_constraintTop_toBottomOf="@id/thirdtitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ullamco laboris nisi ut sed do eiusmod tempor  aliquip ex ea... More" />-->
 
-<!--    </androidx.cardview.widget.CardView>-->
-
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/cardViewTwo">-->
-<!--        <androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content">-->
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="parent"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                android:id="@+id/recycler_view"/>-->
-<!--            <ImageView-->
-<!--                android:id="@+id/thirdimageView"-->
-<!--                android:layout_width="32dp"-->
-<!--                android:layout_height="32dp"-->
-<!--                app:layout_constraintBottom_toTopOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"/>-->
-
-
-<!--            <TextView-->
-<!--                android:id="@+id/thirdtitleText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:lineSpacingExtra="1.5sp"-->
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="8sp"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/thirdimageView"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                android:text="Jessica Kvon" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:lineSpacingExtra="5.5sp"-->
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="5.5sp"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/thirdtitleText"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ullamco laboris nisi ut sed do eiusmod tempor  aliquip ex ea... More" />-->
-
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--    </androidx.cardview.widget.CardView>-->
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
