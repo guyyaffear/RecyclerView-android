@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private lateinit var blogAdapter: BlogRecyclerAdapter
+    private lateinit var picAdapter: PicRecyclerAdpater
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +34,13 @@ private fun initRecyclerView(){
           blogAdapter = BlogRecyclerAdapter()
            adapter = blogAdapter
        }
+    recycler_view1.apply{
+        layoutManager = LinearLayoutManager( this@MainActivity, LinearLayoutManager.HORIZONTAL, true)
+        val topSpacingDecorator = TopSpacingItemDecoration(30)
+        addItemDecoration(topSpacingDecorator)
+        picAdapter = PicRecyclerAdpater()
+        adapter = picAdapter
+    }
    }
 
 
