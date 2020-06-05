@@ -16,10 +16,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewOne"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
         android:shadowColor="#000"
         android:shadowDx="0"
         android:shadowDy="30"
@@ -28,7 +27,6 @@
         app:cardCornerRadius="8dp"
         app:contentPadding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline">
@@ -36,7 +34,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container1"
             android:layout_width="match_parent"
-            android:layout_height="72dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/aboutMe"
@@ -100,12 +98,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="396dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
         android:layout_marginBottom="4dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
         android:shadowColor="#000"
         android:shadowDx="0"
         android:shadowDy="30"
@@ -113,22 +108,22 @@
         app:cardBackgroundColor="@color/cardview_dark_background"
         app:cardCornerRadius="8dp"
         app:contentPadding="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/cardViewOne"
+        app:layout_constraintStart_toStartOf="@id/cardViewOne"
         app:layout_constraintTop_toBottomOf="@id/cardViewOne">
 
         <RelativeLayout
             android:id="@+id/layout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:padding="5dp">
             <TextView
                 android:id="@+id/textNextShow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:layout_centerInParent="true"
+                android:layout_margin="4dp"
                 android:text="winner of may 4 place in current contest"
                 android:textColor="#e4e6f1"
                 android:textSize="5.5sp" />
@@ -148,6 +143,38 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:shadowColor="#000"
+        android:shadowDx="0"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        android:shadowDy="30"
+        android:shadowRadius="50"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="5dp"
+        app:layout_constraintStart_toStartOf="@id/cardViewOne"
+        app:layout_constraintEnd_toEndOf="@id/cardViewOne"
+        app:layout_constraintTop_toBottomOf="@id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_dark_background"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view1"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                app:cardBackgroundColor="@color/cardview_dark_background" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
         android:layout_width="387dp"
         android:id="@+id/cardView4"
         android:layout_height="wrap_content"
@@ -162,7 +189,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardViewOne"
         app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
 
@@ -195,37 +222,6 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_marginStart="12dp"
-        android:shadowColor="#000"
-        android:shadowDx="0"
-        android:shadowDy="30"
-        android:shadowRadius="50"
-        app:cardCornerRadius="8dp"
-        app:contentPadding="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView2">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/cardview_dark_background"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view1"
-                android:layout_width="195dp"
-                android:layout_height="wrap_content"
-                android:scrollbars="vertical"
-                app:cardBackgroundColor="@color/cardview_dark_background" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
