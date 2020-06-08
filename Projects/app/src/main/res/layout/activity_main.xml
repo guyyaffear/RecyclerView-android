@@ -21,6 +21,7 @@
         android:layout_marginHorizontal="12dp"
         android:shadowColor="#000"
         android:shadowDx="0"
+        android:layout_marginTop="4dp"
         android:shadowDy="30"
         android:shadowRadius="50"
         app:cardBackgroundColor="@color/cardview_dark_background"
@@ -99,6 +100,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="0dp"
+        android:layout_margin="4dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:shadowColor="#000"
@@ -147,6 +149,7 @@
         android:layout_width="0dp"
         android:layout_height="72dp"
         android:shadowColor="#000"
+        android:layout_margin="4dp"
         android:shadowDx="0"
         app:cardBackgroundColor="@color/cardview_dark_background"
         android:shadowDy="30"
@@ -163,7 +166,7 @@
             android:background="@color/cardview_dark_background"
             android:baselineAligned="false"
             android:orientation="horizontal"
-            android:padding="5dp">
+            >
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view1"
@@ -174,23 +177,24 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
-        android:layout_width="387dp"
         android:id="@+id/cardView4"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_margin="8dp"
+        android:layout_height="72dp"
+        android:layout_marginHorizontal="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="8dp"
-        android:paddingTop="8dp"
+        android:paddingTop="3dp"
         android:shadowColor="#000"
         android:shadowDx="0"
         android:shadowDy="30"
         android:shadowRadius="50"
         app:cardBackgroundColor="@color/cardview_dark_background"
         app:cardCornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="@+id/cardViewOne"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        app:layout_constraintEnd_toEndOf="@id/cardViewOne"
+        app:layout_constraintTop_toBottomOf="@id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardViewOne">
 
 
         <RelativeLayout
