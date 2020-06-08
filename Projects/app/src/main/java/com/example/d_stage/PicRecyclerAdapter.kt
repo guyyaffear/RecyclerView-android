@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.d_stage.models.BlogPost
 import com.example.d_stage.models.pic
 import kotlinx.android.synthetic.main.layout_recyclinview.view.*
 
-class PicRecyclerAdpater : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class PicRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var items: List<pic> = ArrayList();
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -31,7 +32,7 @@ class PicRecyclerAdpater : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return items.size
     }
 
-    fun submitList(picList: List<pic>) {
+    fun submitList(picList: ArrayList<pic>) {
         items = picList
     }
 

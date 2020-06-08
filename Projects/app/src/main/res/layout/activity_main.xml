@@ -5,7 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundphoto"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/maintitle">
+
+    <TextView
+        android:id="@+id/titleTextitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="292dp"
+        android:layout_toEndOf="@id/maintitle"
+        android:fontFamily="sans-serif-medium"
+        android:text="Jessica Kvon"
+        android:textColor="#ffffff"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="@id/maintitle"
+        app:layout_constraintStart_toStartOf="@+id/maintitle" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -13,7 +29,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewOne"
         android:layout_width="0dp"
@@ -170,7 +185,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view1"
-                android:layout_width="195dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scrollbars="vertical"
                 app:cardBackgroundColor="@color/cardview_dark_background" />
